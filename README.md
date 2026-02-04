@@ -55,22 +55,4 @@ USMD and UDLM can be used respectively for model training and real-world general
 
 Download link: [Baidu]( https://pan.baidu.com/s/1kZNsOI1ZZ6QZKpJuZDa_9Q?pwd=7sr9) Password: 7sr9
 
-## 🗂 Description of the File Structure
 
-```text
-USMD-and-UDLM/
-├── USMD/
-│   ├── images/
-│   │   ├── train/
-│   │   ├── val/
-│   │   └── test/
-│   └── labels/
-│       ├── train/
-│       ├── val/
-│       └── test/
-├── UDLM/
-│   ├── images/
-│   └── labels/
-├── combined_analysis.pdf
-├── README.md
-└── LICENSE
