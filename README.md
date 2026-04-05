@@ -11,7 +11,7 @@ The dataset consists of two complementary parts:
 
 The two datasets share consistent category definitions and annotation rules, enabling joint model training and real-world generalization evaluation.
 
-Contact: Ning Huang, Email:funny1201@foxmail.com;  Changdong Yu, Email: ycd@dlmu.edu.cn;
+Contact: Ning Huang, Email:funny1201@foxmail.com;
 ---
 
 ![pdf](combined_analysis.pdf)
