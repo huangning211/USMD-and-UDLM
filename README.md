@@ -1,58 +1,104 @@
-# USMD-and-UDLM
+# USMD & UDLM: Maritime Small Object Datasets for USVs
 
-##  Overview
+## 1. Overview
+This repository provides two maritime small target datasets specifically designed for the **unmanned surface vessel (USV) perspective**, aiming to address the lack of **low-view, high-small-target-ratio** scenarios in existing maritime datasets.
 
-USMD-and-UDLM is a maritime small-object dataset designed for unmanned surface vessel (USV) perception tasks, such as maritime patrol, marine governance, and autonomous navigation.
+- **USMD (The Small Maritime Datasets for USV)**：Large-scale training and evaluation benchmark datasets built from multiple public datasets
+- **UDLM (The Small Maritime Datasets for USV collected in Dalian)**：Data were collected from real-world ocean areas for cross-domain generalization capability assessment.  
 
-The dataset consists of two complementary parts:
+Both datasets use a unified 7-class annotation system and YOLO annotation standard to ensure **consistency and fairness of experimental results**.
 
-- **USMD**: a large-scale dataset constructed by filtering and re-labeling multiple publicly available maritime datasets.
-- **UDLM**: a real-world dataset collected and annotated by a self-built unmanned surface vessel (USV) platform in Dalian Bay.
+Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code: Please contact us to obtain.
 
-The two datasets share consistent category definitions and annotation rules, enabling joint model training and real-world generalization evaluation.
-
-Contact: Ning Huang, Email:funny1201@foxmail.com;
----
-
-![pdf](combined_analysis.pdf)
-
-## Dataset Description
-
-### USMD (The Small Maritime Dataset for USV)
-
-The **USMD** dataset is a large-scale dataset obtained by filtering and re-labeling multiple publicly available maritime datasets.  
-All images are strictly selected from the **USV perspective**, ensuring that the vast majority of objects occupy less than **1% of the image area**, which conforms to the definition of maritime small objects.
-
-- Data split: training / validation / test = **7 : 2 : 1**
-- Usage: model training and performance evaluation
-- Object categories:
-  - Passenger ship  
-  - Freighter  
-  - Yacht  
-  - Assault boat  
-  - Canoe  
-  - Fisher  
-  - Others  
 
 ---
 
-### UDLM (The Small Maritime Dataset for USV collected in DaLian)
+## 2. Dataset Description
 
-The **UDLM** dataset is a small-scale dataset collected and annotated in real marine environments using a self-built unmanned surface vessel (USV) platform.
+### 2.1 USMD Dataset
+- **Data source**：SMD、MODS、Iships-1 (Unified screening and relabeling)
+- **Number of images**：14,350
+- **Number of instances**：56,378
+- **Data partitioning**：7:2:1（train/val/test）
+- **Resolution**：Multi-scale (training is uniformly 640×640)
+---
 
-- Collection area: Dalian Bay and surrounding waters
-- Image resolution: 1920 × 1080
-- Weather conditions: clear, cloudy, and foggy
-- Supplementary data: a small number of publicly available online maritime images
-- Usage: evaluation of **model generalization ability** and **engineering applicability**
-- Object categories: consistent with USMD
-
-USMD and UDLM can be used respectively for model training and real-world generalization testing.
+### 2.2 UDLM Dataset
+- **Data source**：Data collected in the nearshore waters of Dalian using a self-developed USV platform.
+- **Number of images**：1,042
+- **Number of instances**：2,328
+- **Resolution**：1920×1080
 
 ---
 
-# Download Datasets
+### 2.3 Categories
 
-Download link: [Baidu]( https://pan.baidu.com/s/1kZNsOI1ZZ6QZKpJuZDa_9Q?) Password: Please contact us to obtain
+| ID | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|----|----|----|----|----|----|----|----|
+| Category | Passenger ship | Freighter | Yacht | Assault boat | Canoe | Fisher | Others 
+
+---
+
+## 3. Dataset Statistics
+
+### 3.1 USMD Statistics
+
+| Class | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
+|------|----------|----------|------------|--------|--------|--------|
+| Passenger | 1734 | 0.58 | 0.08 | 0.03 | 0.34 | 14.30 |
+| Freighter | 10486 | 1.60 | 0.61 | 0.15 | 1.71 | 36.28 |
+| Yacht | 6285 | 1.59 | 0.49 | 0.12 | 1.85 | 45.26 |
+| Assault | 5636 | 0.41 | 0.18 | 0.07 | 0.39 | 11.10 |
+| Canoe | 2472 | 3.02 | 1.65 | 0.65 | 3.14 | 40.26 |
+| Fisher | 26892 | 1.53 | 0.45 | 0.09 | 1.40 | 52.41 |
+| Others | 2873 | 0.09 | 0.01 | 0.01 | 0.05 | 5.70 |
+| **Total** | **56378** | **1.40** | **0.38** | **0.08** | **1.36** | **52.41** |
+
+---
+
+### 3.2 UDLM Statistics
+
+| Class | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
+|------|----------|----------|------------|--------|--------|--------|
+| Passenger | 213 | 1.31 | 0.30 | 0.08 | 1.54 | 8.19 |
+| Freighter | 825 | 1.25 | 0.41 | 0.10 | 1.24 | 36.28 |
+| Yacht | 284 | 0.69 | 0.55 | 0.26 | 0.80 | 6.67 |
+| Assault | 193 | 0.60 | 0.21 | 0.11 | 0.37 | 7.04 |
+| Canoe | 211 | 5.52 | 2.66 | 1.55 | 4.68 | 36.73 |
+| Fisher | 399 | 2.55 | 0.80 | 0.21 | 3.05 | 13.19 |
+| Others | 314 | 0.23 | 0.13 | 0.04 | 0.28 | 2.13 |
+| **Total** | **2439** | **1.59** | **0.43** | **0.11** | **1.37** | **36.73** |
+
+---
+
+## 4. Visualization
+
+### USMD Samples
+![USMD Sample](./images/usmd1.jpg)
+
+### UDLM Samples
+![UDLM Sample](./images/udlm1.jpg)
+
+---
+
+### Statistical Visualization
+
+![Visualization](./images/vis.png)
+
+(a) USMD instance quantity distribution. (b) USMD aspect ratio distribution.  
+(c) UDLM instance quantity distribution. (d) UDLM aspect ratio distribution. 
+
+---
+
+## 5. Contact
+
+- **Ning Huang**: funny1201@foxmail.com
+- **Affiliation**: Dalian Maritime University
 
 
+## 6. Citation
+
+If you use this dataset in your research, please cite our paper:
+
+```bibtex
+敬请期待
