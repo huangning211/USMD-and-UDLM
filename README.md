@@ -18,19 +18,19 @@ For researchers who are unable to access Baidu Netdisk, alternative download opt
 ## 2. Dataset Description
 
 ### 2.1 USMD Dataset
-- **Data source**：SMD、MODS、Iships-1 (Unified screening and relabeling)
-- **Number of images**：14,350
-- **Number of instances**：56,378
-- **Data partitioning**：7:2:1（train/val/test）
-- **Resolution**：Multi-scale (training is uniformly 640×640)
+- **Data source**: SMD, MODS and Iships-1 (Unified screening and relabeling)
+- **Number of images**: 14,350
+- **Number of instances**: 56,378
+- **Data partitioning**: 7:2:1（train/val/test）
+- **Resolution**: Multi-scale (training is uniformly 640×640)
 - The USMD sample data is located in the directory: `/sample/USMD`
 ---
 
 ### 2.2 UDLM Dataset
-- **Data source**：Data collected in the nearshore waters of Dalian using a self-developed USV platform. 
-- **Number of images**：1,042
-- **Number of instances**：2,328
-- **Resolution**：1920×1080
+- **Data source**: Data collected in the nearshore waters of Dalian using a self-developed USV platform. 
+- **Number of images**: 1,042
+- **Number of instances**: 2,328
+- **Resolution**: 1920×1080
 - The UDLM sample data is located in the directory: `/sample/UDLM`
 
 ---
@@ -117,8 +117,6 @@ if __name__ == '__main__':
 
 ## 4. Dataset Statistics
 
-
-
 ### 4.1 USMD Statistics
 
 | Class | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
@@ -126,7 +124,7 @@ if __name__ == '__main__':
 | Passenger ship | 1734 | 0.58 | 0.08 | 0.03 | 0.34 | 14.30 |
 | Freighter | 10486 | 1.60 | 0.61 | 0.15 | 1.71 | 36.28 |
 | Yacht | 6285 | 1.59 | 0.49 | 0.12 | 1.85 | 45.26 |
-| Assault | 5636 | 0.41 | 0.18 | 0.07 | 0.39 | 11.10 |
+| Assault boat | 5636 | 0.41 | 0.18 | 0.07 | 0.39 | 11.10 |
 | Canoe | 2472 | 3.02 | 1.65 | 0.65 | 3.14 | 40.26 |
 | Fisher | 26892 | 1.53 | 0.45 | 0.09 | 1.40 | 52.41 |
 | Others | 2873 | 0.09 | 0.01 | 0.01 | 0.05 | 5.70 |
