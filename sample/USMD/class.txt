@@ -1,0 +1,7 @@
+passenger ship
+freighter
+yacht
+assault boat
+canoe
+fisher
+others
