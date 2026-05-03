@@ -1,14 +1,16 @@
 # USMD & UDLM: Maritime Small Object Datasets for USVs
 
 ## 1. Overview
-This repository provides two maritime small target datasets specifically designed for the **unmanned surface vessel (USV) perspective**, aiming to address the lack of **low-view, high-small-target-ratio** scenarios in existing maritime datasets.
+This repository provides two maritime small-object datasets specifically designed from the **unmanned surface vessel (USV) perspective**, addressing the lack of **low-view, high-small-target-ratio** scenarios in existing maritime datasets.
 
-- **USMD (The Small Maritime Datasets for USV)**：Large-scale training and evaluation benchmark datasets built from multiple public datasets
-- **UDLM (The Small Maritime Datasets for USV collected in Dalian)**：Data were collected from real-world ocean areas for cross-domain generalization capability assessment.  
+- **USMD (The Small Maritime Datasets for USV)**： Large-scale training and evaluation benchmark datasets built from multiple public datasets
+- **UDLM (The Small Maritime Datasets for USV collected in Dalian)**： Data were collected from real-world ocean areas for cross-domain generalization capability assessment.  
 
 Both datasets use a unified 7-class annotation system and YOLO annotation standard to ensure **consistency and fairness of experimental results**.
 
-Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code: Please contact us to obtain.
+**Dataset address**: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg  
+**Extraction code**: Please get in touch with us to obtain.  
+For researchers who are unable to access Baidu Netdisk, alternative download options are available upon request. Please contact us to request access.
 
 
 ---
@@ -41,9 +43,83 @@ Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code
 
 ---
 
-## 3. Dataset Statistics
+## 3. Dataset Usage
 
-### 3.1 USMD Statistics
+### 3.1 Directory Structure
+
+The dataset follows the standard YOLO format. The directory structure is organized as follows:
+
+```
+USMD/
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+├── labels/
+│   ├── train/
+│   ├── val/
+│   └── test/
+```
+```
+UDLM/
+├── images/
+├── labels/
+```
+---
+
+### 3.2 Training Example
+
+You can directly use the dataset with YOLO-based frameworks:
+
+```bash
+yolo detect train data=dataset.yaml model=yolov8n.yaml imgsz=640 batch=48 epochs=300
+```
+
+An example `dataset.yaml` file:
+
+```yaml
+path: dataset
+train: images/train
+val: images/val
+test: images/test
+
+nc: 7
+names: [Passenger ship, Freighter, Yacht, Assault boat, Canoe, Fisher, Others]
+```
+
+### 3.3 Testing Example
+
+You can evaluate a trained model using the following Python script:
+
+```python
+from ultralytics import YOLO
+
+if __name__ == '__main__':
+
+    # Load trained model
+    model = YOLO('best.pt')
+
+    # Run evaluation on the test set
+    metrics = model.val(
+        data='dataset.yaml',   # dataset configuration file
+        split='test',          # evaluate on test set
+        imgsz=640,             # image size
+        batch=48,              # batch size
+    )
+```
+
+**Notes:**
+
+* Ensure that `best.pt` is the trained weight file
+* `dataset.yaml` should correctly point to your dataset path
+
+---
+
+## 4. Dataset Statistics
+
+
+
+### 4.1 USMD Statistics
 
 | Class | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
 |------|----------|----------|------------|--------|--------|--------|
@@ -58,7 +134,7 @@ Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code
 
 ---
 
-### 3.2 UDLM Statistics
+### 4.2 UDLM Statistics
 
 | Class          | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
 |----------------|-----------|----------|------------|--------|--------|---------|
@@ -73,7 +149,7 @@ Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code
 
 ---
 
-## 4. Visualization
+## 5. Visualization
 
 ### USMD Samples
 ![USMD Sample](./images/usmd1.jpg)
@@ -92,13 +168,13 @@ Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code
 
 ---
 
-## 5. Contact
+## 6. Contact
 
 - **Ning Huang**: funny1201@foxmail.com
 - **Affiliation**: Dalian Maritime University
 
 
-## 6. Citation
+## 7. Citation
 
 If you use this dataset in your research, please cite our paper:
 
