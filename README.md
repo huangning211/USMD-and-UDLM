@@ -21,7 +21,7 @@ Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code
 - **Number of instances**：56,378
 - **Data partitioning**：7:2:1（train/val/test）
 - **Resolution**：Multi-scale (training is uniformly 640×640)
-- The USMD sample data is located in the `/sample/USMD` directory.
+- The USMD sample data is located in the directory: `/sample/USMD`
 ---
 
 ### 2.2 UDLM Dataset
@@ -29,7 +29,7 @@ Dataset address: https://pan.baidu.com/s/1tvtgoDRhKVL2tVCM6xuGCg Extraction code
 - **Number of images**：1,042
 - **Number of instances**：2,328
 - **Resolution**：1920×1080
-- The UDLM sample data is located in the `/sample/UDLM` directory.
+- The UDLM sample data is located in the directory: `/sample/UDLM`
 
 ---
 
