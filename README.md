@@ -8,7 +8,7 @@ This repository provides two maritime small-object datasets specifically designe
 
 Both datasets use a unified 7-class annotation system and YOLO annotation standard to ensure **consistency and fairness of experimental results**.
 
-**Dataset address**: https://pan.baidu.com/s/1MYrwhMJyvDd6dt9re2VIbA?
+**Dataset address**: https://pan.baidu.com/s/1MYrwhMJyvDd6dt9re2VIbA?  
 **Extraction code**: 2rh2  
 For researchers who are unable to access Baidu Netdisk, alternative download options are available upon request. Please contact us to request access.
 
