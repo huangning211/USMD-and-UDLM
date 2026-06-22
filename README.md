@@ -177,4 +177,14 @@ if __name__ == '__main__':
 If you use this dataset in your research, please cite our paper:
 
 ```bibtex
-Stay tuned
+@article{YAO2026126533,
+title = {DGP-SFNet: An efficient visual perception architecture for small maritime objects on unmanned surface vehicles},
+journal = {Ocean Engineering},
+volume = {363},
+pages = {126533},
+year = {2026},
+issn = {0029-8018},
+doi = {https://doi.org/10.1016/j.oceaneng.2026.126533},
+url = {https://www.sciencedirect.com/science/article/pii/S002980182602367X},
+author = {Jingyi Yao and Ning Huang and Wenjie Shi and Xinming Han and Changdong Yu}
+}
