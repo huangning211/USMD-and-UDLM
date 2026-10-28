@@ -18,7 +18,7 @@ The current public release includes **8,000 images from the USMD dataset**, alon
 
 The publicly available dataset can be downloaded from **Baidu Netdisk**:
 
-- **Download Link:** 
+- **Download Link:** https://pan.baidu.com/s/1d093scrtqsiISattDQ-HAA?pwd=u8dg 
 
 For researchers who are unable to access Baidu Netdisk, alternative download options are available upon request.
 
