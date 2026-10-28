@@ -8,16 +8,26 @@ This repository provides two maritime small-object datasets specifically designe
 
 Both datasets use a unified 7-class annotation system and YOLO annotation standard to ensure **consistency and fairness of experimental results**.
 
-**Dataset address**: https://pan.baidu.com/s/1MYrwhMJyvDd6dt9re2VIbA?  
-**Extraction code**: please contact us.  
-For researchers who are unable to access Baidu Netdisk, alternative download options are available upon request. Please contact us to request access.
-
-
 ---
 
-## 2. Dataset Description
+## 2. Dataset Availability and Usage Notes
 
-### 2.1 USMD Dataset
+**Current Public Release**
+
+The current public release includes **8,000 images from the USMD dataset**, along with their corresponding annotations in YOLO format. These images are provided **without predefined training, validation, or testing splits**, allowing researchers to establish their own data partitions according to different experimental requirements and evaluation protocols.
+
+The complete USMD benchmark contains 14,350 images, as described in our paper. Since USMD is constructed through the integration, screening, and relabeling of multiple publicly available datasets, we are currently releasing a curated subset while further reviewing the remaining data and associated redistribution conditions. Please note that the publicly released subset does not fully correspond to the experimental dataset used in the original paper.
+
+**UDLM Release Status**
+
+The UDLM dataset, comprising 1,042 images collected in real-world nearshore environments using our self-developed USV platform, **is not yet publicly available**. We plan to release UDLM after completing the necessary data review and release preparations.
+
+Researchers interested in accessing the datasets or obtaining further information are welcome to contact us at **funny1201@foxmail.com**.
+
+
+## 3. Dataset Description
+
+### 3.1 USMD Dataset
 - **Data source**: SMD, MODS and Iships-1 (Unified screening and relabeling)
 - **Number of images**: 14,350
 - **Number of instances**: 56,378
@@ -26,7 +36,7 @@ For researchers who are unable to access Baidu Netdisk, alternative download opt
 - The USMD sample data is located in the directory: `/sample/USMD`
 ---
 
-### 2.2 UDLM Dataset
+### 3.2 UDLM Dataset
 - **Data source**: Data collected in the nearshore waters of Dalian using a self-developed USV platform. 
 - **Number of images**: 1,042
 - **Number of instances**: 2,328
@@ -35,7 +45,7 @@ For researchers who are unable to access Baidu Netdisk, alternative download opt
 
 ---
 
-### 2.3 Categories
+### 3.3 Categories
 
 | ID | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |----|----|----|----|----|----|----|----|
@@ -43,9 +53,9 @@ For researchers who are unable to access Baidu Netdisk, alternative download opt
 
 ---
 
-## 3. Dataset Usage
+## 4. Dataset Usage
 
-### 3.1 Directory Structure
+### 4.1 Directory Structure
 
 The dataset follows the standard YOLO format. The directory structure is organized as follows:
 
@@ -67,7 +77,7 @@ UDLM/
 ```
 ---
 
-### 3.2 Training Example
+### 4.2 Training Example
 
 You can directly use the dataset with YOLO-based frameworks:
 
@@ -87,7 +97,7 @@ nc: 7
 names: [Passenger ship, Freighter, Yacht, Assault boat, Canoe, Fisher, Others]
 ```
 
-### 3.3 Testing Example
+### 4.3 Testing Example
 
 You can evaluate a trained model using the following Python script:
 
@@ -115,9 +125,9 @@ if __name__ == '__main__':
 
 ---
 
-## 4. Dataset Statistics
+## 5. Dataset Statistics
 
-### 4.1 USMD Statistics
+### 5.1 USMD Statistics
 
 | Class | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
 |------|----------|----------|------------|--------|--------|--------|
@@ -132,7 +142,7 @@ if __name__ == '__main__':
 
 ---
 
-### 4.2 UDLM Statistics
+### 5.2 UDLM Statistics
 
 | Class          | Instances | Mean (%) | Median (%) | Q1 (%) | Q3 (%) | Max (%) |
 |----------------|-----------|----------|------------|--------|--------|---------|
@@ -147,7 +157,7 @@ if __name__ == '__main__':
 
 ---
 
-## 5. Visualization
+## 6. Visualization
 
 ### USMD Samples
 ![USMD Sample](./images/usmd1.jpg)
@@ -166,13 +176,13 @@ if __name__ == '__main__':
 
 ---
 
-## 6. Contact
+## 7. Contact
 
 - **Ning Huang**: funny1201@foxmail.com
 - **Affiliation**: Dalian Maritime University
 
 
-## 7. Citation
+## 8. Citation
 
 If you use this dataset in your research, please cite our paper:
 
