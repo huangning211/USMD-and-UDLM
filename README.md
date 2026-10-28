@@ -12,17 +12,21 @@ Both datasets use a unified 7-class annotation system and YOLO annotation standa
 
 ## 2. Dataset Availability and Usage Notes
 
-**Current Public Release**
+### 2.1 Current Public Release
 
 The current public release includes **8,000 images from the USMD dataset**, along with their corresponding annotations in YOLO format. These images are provided **without predefined training, validation, or testing splits**, allowing researchers to establish their own data partitions according to different experimental requirements and evaluation protocols.
 
-The complete USMD benchmark contains 14,350 images, as described in our paper. Since USMD is constructed through the integration, screening, and relabeling of multiple publicly available datasets, we are currently releasing a curated subset while further reviewing the remaining data and associated redistribution conditions. Please note that the publicly released subset does not fully correspond to the experimental dataset used in the original paper.
+The publicly available dataset can be downloaded from **Baidu Netdisk**:
 
-**UDLM Release Status**
+- **Download Link:** https://pan.baidu.com/s/1MYrwhMJyvDd6dt9re2VIbA
 
-The UDLM dataset, comprising 1,042 images collected in real-world nearshore environments using our self-developed USV platform, **is not yet publicly available**. We plan to release UDLM after completing the necessary data review and release preparations.
+For researchers who are unable to access Baidu Netdisk, alternative download options are available upon request.
 
-Researchers interested in accessing the datasets or obtaining further information are welcome to contact us at **funny1201@foxmail.com**.
+The complete USMD benchmark contains **14,350 images**, as described in our paper. Since USMD is constructed through the integration, screening, and relabeling of multiple publicly available datasets, we are currently releasing a curated subset while further reviewing the remaining data and associated redistribution conditions. Please note that the publicly released subset does not fully correspond to the experimental dataset used in the original paper.
+
+### 2.2 UDLM Release Status
+
+The UDLM dataset, comprising **1,042 images** collected in real-world nearshore environments using our self-developed USV platform, **is not yet publicly available**. We plan to release UDLM after completing the necessary data review and release preparations.
 
 
 ## 3. Dataset Description
